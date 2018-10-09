@@ -1,0 +1,31 @@
+<html>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<body>
+  <br>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcomne to Karya</h1>
+      <h2>Powered by Python</h2>
+      <p>Karya enables you to review and approve the invoices</p>
+      <p>Karya enables you to review and approve the invoices</p>
+      <p>New User? <a href="{{ url_for('logout') }}">logout!</a></p>
+    </div>
+    <br>
+ 
+  <form method='POST' enctype=multipart/form-data>
+    <input type="file" name="file" class="btn btn-success"></input>
+    <br>
+    <button type="submit" value=Upload class="btn btn-warning">Go!</button>
+  </form>
+
+
+  
+    <br>
+  </div>
+  </body>
+  </html>
+ 

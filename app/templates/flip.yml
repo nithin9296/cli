@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+issuer: BOTH Commercial Broker
+fields:
+  amount: TOTAL AED\s+([\d,]+.\d{2})
+  date: (\d{2} \w{3} \d{4})
+  invoice_number: Invoice Number\s+((\w{6})-(\d{4}))
+  quantity: to\s+([\d].\d{2})
+  static_partner_name: BOTH Commercial Broker
+  account_number: ACCOUNT NUMBER\s:\s(\d{10})
+keywords:
+  - BOTH Commercial Broker
+  - BOTH MANAGEMENT CONSULTANCY LLC
+  - INVOICE
+  - AED
+  - Jenni Mclean
+options:
+  currency: AED
+  date_formats:
+    - '%d-%b-%Y'
+  languages:
+    - en
+  decimal_separator: '.'

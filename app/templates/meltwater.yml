@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+issuer: Africa HR Solutions Ltd
+fields:
+  amount: Total\s+\$(\d{0,3},\d{3}.\d{2})
+  date: (\d{1,2}/\d{1,2}/\d{4})
+  invoice_number: Invoice\s(IN\d{6})
+  Gross_salary: Gross salary\s+1\s+([\d,]+.\d{2})
+  Invoicing_period: Ghana\s+((\w{3})\s(\d{4}))
+  Employer_Contributions: Employer Contributions\s+1\s+([\d,]+.\d{2})
+
+ 
+keywords:
+  - Africa HR Solutions Ltd
+  - MeltWaterLabs - Ghana
+  - Invoice
+  
+options:
+  currency: US Dollar
+  date_formats:
+    - '%d-%b-%Y'
+  languages:
+    - en
+  decimal_separator: '.'

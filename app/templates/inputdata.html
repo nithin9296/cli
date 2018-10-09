@@ -1,0 +1,89 @@
+<!-- 
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ render_field(form.issuer) }}
+        {{ render_field(form.invoice_number) }}
+        {{ render_field(form.date) }}
+        {{ render_field(form.currency) }}
+        {{ render_field(form.amount) }}
+    </dl>
+    <p><input type=submit value=Submit>
+</form>
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+     
+  
+<head>
+    <meta charset="UTF-8">
+    <!-- href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" -->
+     <link href="../static/bootstrap.min.css" rel="stylesheet">
+      <link href="../static/form-validation.css" rel="stylesheet">
+    <title>Invoice_Data</title>
+</head>
+<body class="bg-light">
+
+    <div class="container">
+      <div class="py-1 text-center">
+        <h2>Invoice Details</h2>
+        <p class="lead">Below is the extract from the Invoice, you can edit the form data and click submit.</p>
+      </div>
+
+     <div class="col-md-6 order-md-1">
+  
+    <form action="/selenium" method="POST">
+    {{ form.csrf_token }}
+
+    <div class="mb-3">
+    <label for="issuer">issuer</label>
+    <input type="text" class="form-control" name ="issuer" value={{form.issuer}}>
+    </div>
+
+    <div class="mb-3">
+    <label for="invoice_number">Invoice_number</label>
+    <input type="text" class="form-control" name="invoice_number" value={{form.invoice_number}}>
+    </div>
+
+    <div class="mb-3">
+    <label for="date">date</label>
+    <input type="text" class="form-control" name="date" value={{form.date}}>
+    </div>
+
+
+    <div class="mb-3">
+    <label for="currency">currency</label>
+    <input type="text" class="form-control" name="currency" value={{form.currency}}>
+    </div>
+
+    <div class="mb-3">
+    <label for="amount">amount</label>
+    <input type="text" class="form-control" name="amount" value={{form.amount}}>
+    </div>
+   
+   <div class="mb-3">
+    <label for="Quantity">Quantity</label>
+    <input type="text" class="form-control" name="Quantity" value={{form.quantity}}>
+    </div>
+
+    <div class="mb-3">
+    <label for="Account_Number">Account_Number</label>
+    <input type="text" class="form-control" name="Account_number" value={{form.account_number}}>
+    </div>
+
+
+    <input type="submit" value="Submit!">
+    </form>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

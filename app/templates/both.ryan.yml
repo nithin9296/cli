@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+issuer: BOTH Commercial Broker
+fields:
+  associate_name: Ryan\s(\w{5})
+  date: (\d{2} \w{3} \d{4})
+  invoice_number: Invoice Number\s+((\w{6})-(\d{4}))
+  amount: TOTAL AED\s+([\d,]+.\d{2})
+  static_partner_name: BOTH Commercial Broker
+keywords:
+  - BOTH Commercial Broker
+  - BOTH MANAGEMENT CONSULTANCY LLC
+  - INVOICE
+  - AED
+  - Ryan James
+options:
+  currency: AED
+  date_formats:
+    - '%d-%b-%Y'
+  languages:
+    - en
+  decimal_separator: '.'

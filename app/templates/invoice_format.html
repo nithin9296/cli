@@ -1,0 +1,30 @@
+
+
+
+
+<h1>Enter Invoice Format</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.issuer.label }}<br>
+            {{ form.issuer(size=32) }}
+        </p>
+        <p>
+            {{ form.invoice_number.label }}<br>
+            {{ form.invoice_number(size=32) }}
+        </p>
+        <p>
+            {{ form.date.label }}<br>
+            {{ form.date(size=32) }}
+        </p>
+        <p>
+            {{ form.currency.label }}<br>
+            {{ form.currency(size=32) }}
+        </p>
+        <p>
+            {{ form.amount.label }}<br>
+            {{ form.amount(size=32) }}
+        </p>
+ 
+        <p>{{ form.submit() }}</p>
+    </form>
